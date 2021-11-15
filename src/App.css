@@ -1,0 +1,630 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.icon{
+    z-index: 10000;
+    position: relative;
+    width:50%;
+}
+.icon1{
+    position: relative;
+    width: 48%;
+}
+:root{
+    --black: #d63031;
+    --white: #00a8ff;
+    --blue: #d63031;
+    --svg:black;
+    --mix:multiply ;
+    --mix1:color;
+    --mix2:screen;
+}
+.dark{
+    --black: #00a8ff;
+    --white: #d63031;
+    --blue:#00a8ff;
+    --svg:#00a8ff;
+    --mix:color;
+    --mix1:multiply;
+    --mix2:multiply;
+}
+.colors{
+    mix-blend-mode: color;
+    color: #00a8ff;
+}
+.blues{
+    mix-blend-mode: multiply;
+    color: #d63031;
+}
+.header{
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+.header .logos{
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    outline: none;
+}
+.rightSide {
+    display: flex;
+}
+.btns{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.btns .icon:nth-child(2){
+    display: none;
+}
+
+.btns .icon1:nth-child(2) {
+    display: none;
+}
+.main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main .mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    user-select: none;
+    mix-blend-mode: screen;
+}
+.dark .mask{
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+.main h2{
+    position: relative;
+    z-index: 3;
+    font-size: 11rem;
+    font-weight: 600;
+    text-shadow: 0 20px 30px rgba(0,0,0,0);
+    animation-delay: 0.5s;
+    animation-name: text;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    transition: 0.5s linear;
+    cursor: pointer;
+}
+.navigation{
+    position:absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+    z-index: 4;
+    transition: 0.5s linear;
+}
+.text{
+    position:absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+    z-index: 6;
+    transition: 0.5s linear;
+    padding: 13rem;
+}
+.carousel{
+    position: absolute;
+    z-index: 7;
+}
+.text h2{
+    font-size: 2.5rem;
+    color:var(--blue);
+    margin-bottom: 2rem;
+    z-index: 6;
+}
+.text p{
+    font-size: 18px;
+    color:var(--blue);
+    z-index: 6;
+}
+.text video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    object-fit: cover;
+    mix-blend-mode: var(--mix);
+}
+.text .mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    user-select: none;
+}
+
+.sources{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+    z-index: 6;
+    transition: 0.5s linear;
+    padding: 10rem;
+    cursor: pointer;
+}
+.sources video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    object-fit: cover;
+    mix-blend-mode: var(--mix);
+}
+.sources .mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    user-select: none;
+}
+.sources .caro{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    cursor: pointer;
+    mix-blend-mode: var(--mix2);
+
+}
+
+.navigation .menu {
+    position: relative;
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: var(--blue);
+    padding: 5px 20px;
+    border-radius: 40px;
+    z-index: 5;
+
+}
+.link{
+    right: 0;
+}
+.active{
+    left:0
+}
+.navigation .menu:hover{
+    color:var(--white);
+    background-color: var(--black);
+}
+.source{
+    position:absolute;
+    right: 100px;
+    bottom:30px;
+    z-index:4;
+    display: flex;
+    flex-direction: column;
+}
+.image{
+    width: 4%;
+}
+.source li{
+    list-style: none;
+}
+.source li a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.75em;
+}
+.contactimage{
+    width: 10%;
+}
+.source2{
+    position:absolute;
+    top:15rem;
+    right: 70rem;
+    z-index:5;
+    display: flex;
+    flex-direction: column;
+}
+.contacttext{
+    position:absolute;
+    top:14.7rem;
+    right: 32rem;
+    z-index:5;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.contacttext .h2 {
+    z-index: 5;
+    color: var(--blue);
+    margin-bottom: 3rem;
+}
+.slides{
+    position: relative;
+    z-index: 7
+}
+.slide img{
+    width: 30rem;
+    height: 25rem;
+    margin: 0 auto;
+    mix-blend-mode: var(--mix1);
+}
+.slide{
+    transform: scale(0.2);
+    transition: transform 100ms;
+    opacity: 0.5;
+}
+.activeSlide{
+    transform: scale(1.3);
+    opacity: 1;
+}
+.arrow{
+    background-color: var(--svg);
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+}
+.arrow svg{
+    transition: color 100ms;
+}
+.arrow svg:hover{
+    color:  var(--white);
+}
+.next{
+    right:9%;
+    top: 50%;
+}
+.prev {
+    left: 5%;
+    top: 50%
+
+}
+.sources{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    flex-direction: column;
+    z-index: 6;
+    transition: 0.5s linear;
+    padding: 10rem;
+    cursor: pointer;
+}
+.sources video{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    object-fit: cover;
+    mix-blend-mode: var(--mix);
+}
+.sources .mask{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    user-select: none;
+}
+.sources .App{
+    padding: 10rem 3rem;
+    margin:4rem auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    cursor: pointer;
+    mix-blend-mode: var(--mix2);
+
+}
+
+@media (min-width:0) and (max-width:509.9px){
+    .main h2{
+        font-size: 4rem;
+    }
+
+    .header{
+        padding: 30px;
+    }
+    .source{
+        right:40px;
+        bottom:40px
+    }
+    .text{
+        padding:6rem 5rem;
+    }
+    .text h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .text p{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .sources .caro{
+        height: 60%;
+        width: 90%;
+    }
+    .sources .App{
+        padding: 15rem 3rem;
+    }
+    .slide img{
+        height: 10rem;
+        width: 8rem;
+    }
+    .next{
+        right: 2%;
+    }
+    .prev{
+        left:1%;
+    }
+
+    .contacttext{
+        top:18rem;
+        right: 8rem;
+    }
+    .contacttext .h2{
+        font-size: 12px;
+        margin-bottom: 3.5rem;
+    }
+    .source2{
+        top: 18rem;
+        right: 20rem;
+    }
+    .contactimage{
+        margin-bottom: 1px;
+    }
+}
+@media (min-width:510px) and (max-width:767.9px){
+    .main h2{
+        font-size: 6rem;
+    }
+    .header{
+        padding: 40px;
+    }
+    .source{
+        right:45px;
+        bottom:30px
+    }
+
+    .text{
+        padding:7.5rem 7.5rem;
+    }
+    .text h2{
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+    }
+    .text p{
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .sources .caro{
+        height: 100%;
+        width: 95%;
+    }
+    .sources .App{
+        padding: 17rem 3.2rem;
+    }
+    .slide img{
+        height: 13rem;
+        width: 10rem;
+    }
+    .next{
+        right: 3%;
+    }
+    .prev{
+        left:0.1%;
+    }
+
+    .contacttext{
+        top:17rem;
+        right: 14rem;
+    }
+    .contacttext .h2{
+        font-size: 16px;
+        margin-bottom: 3.5rem;
+    }
+    .source2{
+        top:17rem;
+        right: 32rem;
+    }
+    .contactimage{
+        margin-bottom: 0.5rem;
+    }
+}
+@media (min-width:768px) and (max-width:989.9px){
+
+    .main h2{
+        font-size: 8rem;
+    }
+    .header{
+        padding: 40px;
+    }
+    .source{
+        right:50px;
+        bottom:35px
+    }
+
+    .text{
+        padding:10rem;
+    }
+    .text h2{
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .text p{
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .sources .caro{
+        height: 100%;
+        width: 95%;
+    }
+
+    .sources .App{
+        padding: 12rem 3.5rem;
+    }
+    .slide img{
+        height: 20rem;
+        width: 18rem;
+    }
+    .next{
+        right: 4.5%;
+    }
+    .prev{
+        left:2%;
+    }
+
+    .contacttext{
+        top:16rem;
+        right: 16rem;
+    }
+    .contacttext .h2{
+        font-size: 24px;
+        margin-bottom: 3.6rem;
+    }
+    .source2{
+        top:16.5rem;
+        right: 40rem;
+    }
+    .contactimage{
+        margin-bottom: 0.9rem;
+    }
+}
+
+@media (min-width:990px) and (max-width:1119.9px){
+
+    .main h2{
+        font-size: 9.5rem;
+    }
+    .header{
+        padding: 50px;
+    }
+    .source{
+        right:50px;
+        bottom:40px
+    }
+
+    .text{
+        padding:11rem;
+    }
+    .text h2{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .text p{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .sources .caro{
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .sources .App{
+        padding: 12rem 3.5rem;
+    }
+    .slide img{
+        height: 20rem;
+        width: 18rem;
+    }
+    .next{
+        right: 6%;
+    }
+    .prev{
+        left:3%;
+    }
+    .contacttext{
+        top:15rem;
+        right: 18rem;
+    }
+    .source2{
+        top:15rem;
+        right: 45rem;
+    }
+    .contactimage{
+        margin-bottom: 1rem;
+    }
+}
+
+@keyframes text {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.50;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    75% {
+        opacity: 0.50;
+    }
+    100% {
+        opacity: 1;
+    }
+}
